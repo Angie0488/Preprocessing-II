@@ -1,11 +1,11 @@
 // Mixins in here
 
-.buttonMixin (@color, @color2) {
-    border: 2px solid @color;
-    background: @color;
-    border-radius: 10px;
-    color: @color2;
-    font-size: 1.75rem;
+.buttonMixin (@radius, @size) {
+    border: 2px solid @button-bg;
+    background: @button-bg;
+    border-radius: @radius;
+    color: @main-bg;
+    font-size: @size;
     font-weight: bold;
     padding: 5% 10%;
 }
