@@ -9,7 +9,7 @@
 
     .headerImg {
       margin: 0 0 3% 0;
-
+      .reflect(20%, 0.2);
     }
 
     .headerH1 {
@@ -107,6 +107,8 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    background: BADA55;
+    .quick-gradient(bottom, 0.2);
 
     @media @mobile {
       flex-direction: column;
@@ -115,7 +117,7 @@
 
     .destination {
       width: 30%;
-      margin-bottom: 30px;
+      margin: 0 0 30px 3%;
 
       @media @mobile {
         width: 85%;
@@ -129,6 +131,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      background: BADA55;
+      .quick-gradient(right, 0.2);
 
       @media @mobile {
         width: 100%;
