@@ -23,12 +23,14 @@
   }
 
   .content-section {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 2.5% 2.5% 0 2.5%;
+    padding: 0 2.5% 0 2.5%;
 
     @media @mobile {
+      width: 100%;
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -60,7 +62,8 @@
   }
 
   .inverse-content {
-    padding-bottom: 30px;
+    display: flex;
+    padding: 30px 2.5%;
     border-bottom: 2px dashed @navigation-border;
     
     @media @mobile {
@@ -85,10 +88,13 @@
 
   .content-destination {
     width: 75%;
-    margin: 0 auto 30px;
-
+    margin: 5% 0 5% 13%;
+    display: flex;
+    flex-direction: column;
+    
     @media @mobile {
       width: 100%;
+      margin-left: 0;
     }
 
     img {
