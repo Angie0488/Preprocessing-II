@@ -1,21 +1,66 @@
+@import "mixins.less";
+
 .home {
 
+  width: 75%;
+  
+  header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+
+    .headerImg {
+      margin: 0 0 3% 0;
+      .reflect(10%, 0.3);
+    }
+
+    .headerH1 {
+      margin-bottom: 5%;
+    }
+
+    p {
+      padding-bottom: 2.5%;
+      border-bottom: 2px dashed lightgray;
+    }
+  }
+
   .content-section {
-    margin: 30px 0;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 0 2.5% 0 2.5%;
 
+    @media @mobile {
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 3% 0;
+    }
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
+      width: 50%;
+      padding-left: 15%;
+
+      @media @tablet {
       width: 48%;
       padding-left: 1%;
+      }
+
+      @media @mobile {
+        width: 100%;
+      }
 
       img {
         border-radius: 10px;
@@ -24,8 +69,14 @@
   }
 
   .inverse-content {
-    padding-bottom: 30px;
+    display: flex;
+    padding: 50px 2.5%;
     border-bottom: 2px dashed @navigation-border;
+    
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -33,14 +84,26 @@
     }
 
     .img-content {
+      width: 50%;
       padding-right: 1%;
       padding-left: 0;
+      
+      @media @mobile {
+        width: 100%;
+      }
     }
   }
 
   .content-destination {
     width: 75%;
-    margin: 0 auto 30px;
+    margin: 5% 0 5% 13%;
+    display: flex;
+    flex-direction: column;
+    
+    @media @mobile {
+      width: 100%;
+      margin-left: 0;
+    }
 
     img {
       border-radius: 10px;
@@ -52,10 +115,70 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    background: BADA55;
+    .quick-gradient(bottom, 0.2);
+
+    @media @mobile {
+      flex-direction: column;
+      align-items: center;
+    }
 
     .destination {
       width: 30%;
-      margin-bottom: 30px;
+      margin: 0 0 30px 3%;
+
+      @media @mobile {
+        width: 85%;
+      }
+
+    }
+
+    .btn {
+      .buttonMixin(10px, 1.75rem);
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: BADA55;
+      .quick-gradient(right, 0.2);
+
+      @media @mobile {
+        width: 100%;
+        padding: 2.5% 10%;
+      }
+    }
+  }
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid slategray;
+    padding: 5% 0;
+    background: BADA55;
+    .quick-gradient(right, 0.2);
+  }
+  form {
+    font-size: 2rem;
+
+    select {
+      font-size: 2rem;
+    }
+
+    textarea {
+      font-size: 2rem;
+      margin-top: 5%;
+    }
+
+    button {
+      width: 100%;
+      padding: 5% 0;
+      font-size: 2.5rem;
+      background: slategray;
+      text-shadow: 1px 2px lightgray;
+
+      &:hover {
+        background: slateblue;
+      }
     }
   }
 }// home
